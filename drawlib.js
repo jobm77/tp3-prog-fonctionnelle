@@ -56,6 +56,17 @@ export function group(shapes) {
 export function move(dx, dy, shape) {
   switch (shape.kind) {
     // TODO 1
+    case "Circle":
+      shape.x += dx;
+      shape.y += dy;
+      break;
+    case "Square":
+      shape.x += dx;
+      shape.y += dy;
+      break;
+    case "Group":
+      shape.shapes.forEach((shape) => move(dx, dy, shape));
+      break;
     default:
       throw "Unexpected! Some case is missing";
   }
