@@ -118,7 +118,6 @@ function renderCircle(color, xCenter, yCenter, radius, context) {
   context.beginPath();
   context.fillStyle = color;
 
-  // Use arc for circles and simulate ellipse with scale for ellipses
   context.arc(xCenter, yCenter, radius, 0, 2 * Math.PI);
 
   context.fill();
